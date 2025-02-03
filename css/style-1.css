@@ -208,7 +208,7 @@ body._lock {
   justify-content: space-between;
   align-items: center;
   gap: 30px;
-  border-radius: 64px;
+  border-radius: 10px;
   /* background-color: #1e42a3; */
   overflow: hidden;
   min-height: 64px;
@@ -346,12 +346,13 @@ body._lock {
   }
 }
 .header__button {
-  border-radius: 32px;
+  border-radius: 10px;
   background: #1e42a3;
   padding: 11px 32px 11px 32px;
   color: #fff;
   transition: all .2s;
   margin-right: -20px;
+  height: 55px;
 }
 
 .header__button:hover {
@@ -368,8 +369,8 @@ body._lock {
 
 .menu__list {
   display: flex;
-  -moz-column-gap: 65px;
-       column-gap: 65px;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
   row-gap: 8px;
   flex-wrap: wrap;
 }
@@ -683,7 +684,7 @@ body._lock {
 }
 .main-slide__button {
   cursor: pointer;
-  border-radius: 32px;
+  border-radius: 10px;
   border: 1px solid #1e42a3;
   padding: 16px 32px 15px 32px;
   display: inline-flex;
@@ -870,7 +871,7 @@ body._lock {
 
 .offers {
   padding: 64px 0px 128px 0px;
-  border-radius: 64px 64px 0px 0px;
+  border-radius: 10px 10px 0px 0px;
   background: linear-gradient(82deg, #122969 0%, #1e42a3 100%);
   color: #fff;
   overflow: hidden;
@@ -879,7 +880,7 @@ body._lock {
 @media (max-width: 767px) {
   .offers {
     padding: 40px 0px 64px 0px;
-    border-radius: 32px 32px 0px 0px;
+    border-radius: 10px 10px 0px 0px;
   }
   .offers::after {
     content: "";
@@ -967,7 +968,7 @@ body._lock {
   left: 0;
   width: 300%;
   height: 100%;
-  border-radius: 64px 0px 0px 64px;
+  border-radius: 10px 0px 0px 10px;
   background-color: #1e42a3;
 }
 @media (max-width: 767px) {
@@ -1043,7 +1044,7 @@ body._lock {
 .details {
   position: relative;
   margin-top: -64px;
-  border-radius: 64px 64px 0px 0px;
+  border-radius: 10px 10px 0px 0px;
   background: #EEF3F9;
   padding: 64px 0px 128px 0px;
   color:rgb(0, 0, 0);
@@ -1052,7 +1053,7 @@ body._lock {
 @media (max-width: 767px) {
   .details {
     padding: 32px 0px 100px 0px;
-    border-radius: 32px 32px 0px 0px;
+    border-radius: 10px 10px 0px 0px;
   }
 
   .offers__bg-links {
@@ -1275,7 +1276,7 @@ body._lock {
 }
 .details__item {
   min-width: 30%;
-  border-radius: 32px;
+  border-radius: 10px;
   background-color: #122969;
   display: flex;
   padding: 16px 16px;
@@ -1378,7 +1379,7 @@ body._lock {
 
 .history {
   position: relative;
-  border-radius: 64px 64px 0px 0px;
+  border-radius: 10px 10px 0px 0px;
   background: linear-gradient(82deg, #122969 0%,#1e42a3 100%);
   padding: 64px 0px 128px 0px;
   margin-top: -64px;
@@ -1386,7 +1387,7 @@ body._lock {
 }
 @media (max-width: 767px) {
   .history {
-    border-radius: 32px 32px 0px 0px;
+    border-radius: 10px 10px 0px 0px;
     padding: 32px 0px 64px 0px;
     margin-top: -32px;
   }
@@ -1516,14 +1517,43 @@ body._lock {
 
 @media (max-width: 500px) {
   .header__logo a img {
-      width: 150px;
+      width: 200px;
   }
 }
 
 @media (min-width: 1280px) {
   .header__logo a img {
-      width: 200px;
+      width: 250px;
   }
+
+  .menu__list {
+    display: flex;
+    -moz-column-gap: 35px;
+         column-gap: 35px;
+    row-gap: 8px;
+    flex-wrap: wrap;
+  }
+
+}
+
+.popup__body h4 {
+  font-size: 24px; /* Увеличенный размер */
+  font-weight: bold; /* Жирный шрифт */
+  color: #1e42a3; /* Яркий цвет для акцента */
+  text-transform: uppercase; /* Сделать заглавными */
+  margin-bottom: 10px;
+}
+
+@media (min-width: 1450px) {
+  .menu__list {
+    display: flex;
+    -moz-column-gap: 65px;
+         column-gap: 65px;
+    row-gap: 8px;
+    flex-wrap: wrap;
+    padding-left: 140px;
+  }
+
 }
 
 
@@ -1764,7 +1794,7 @@ body._lock {
 
 .for {
   position: relative;
-  border-radius: 64px 64px 0px 0px;
+  border-radius: 10px 10px 0px 0px;
   margin-top: -64px;
   padding: 64px 0px 128px 0px;
   background-color: #fff;
@@ -1779,7 +1809,7 @@ body._lock {
   .for {
     padding: 32px 0px 64px 0px;
     margin-top: -32px;
-    border-radius: 32px 32px 0px 0px;
+    border-radius: 10px 10px 0px 0px;
   }
 }
 .for__title {
@@ -1831,6 +1861,7 @@ body._lock {
   justify-content: stretch;
   margin-bottom: 40px;
   flex-wrap: wrap;
+  column-gap: 15px
 }
 @media (max-width: 991.98px) {
   .for__tab-buttons {
@@ -1846,7 +1877,7 @@ body._lock {
   line-height: 140%;
   letter-spacing: 0.18px;
   padding: 16px 16px 15px 16px;
-  border-radius: 32px;
+  border-radius: 10px;
   background-color: #1e42a3;
 }
 .for__tab-button.active {
@@ -2003,7 +2034,7 @@ body._lock {
 .reviews {
   position: relative;
   margin-top: -64px;
-  border-radius: 64px 64px 0px 0px;
+  border-radius: 10px 10px 10px 10px;
   background: #122969;
   padding: 64px 0px 128px 0px;
 }
@@ -2016,7 +2047,7 @@ body._lock {
   .reviews {
     margin-top: -32px;
     padding: 32px 0px 64px 0px;
-    border-radius: 32px 32px 0px 0px;
+    border-radius: 10px 10px 0px 0px;
   }
 }
 .reviews__container {
@@ -2357,6 +2388,7 @@ body._lock {
 .callback {
   padding: 64px 0px 64px 0px;
   background-color: #fff;
+  border-radius: 10px;
 }
 @media (max-width: 767px) {
   .callback {
@@ -2421,7 +2453,7 @@ body._lock {
 }
 .form-callback__input {
   width: 100%;
-  border-radius: 32px;
+  border-radius: 10px;
   border: 1px solid #C4DDCA;
   background: #FFF;
   padding: 17px 32px;
@@ -2431,7 +2463,7 @@ body._lock {
   justify-content: center;
   align-items: center;
   padding: 16px 32px 15px 32px;
-  border-radius: 32px;
+  border-radius: 10px;
   background-color: #1e42a3;
   color: #fff;
   transition: background-color 0.3s ease 0s;
@@ -2453,7 +2485,7 @@ body._lock {
 
 .contacts {
   color:rgb(255, 255, 255);
-  background-color: #EEF3F9;
+  background-color:rgb(255, 255, 255);
 }
 .contacts__decor-left {
   background-color:rgb(255, 255, 255);
@@ -2521,6 +2553,7 @@ body._lock {
   padding-top: 64px;
   padding-bottom: 64px;
   background-color: #122969;
+  border-radius: 10px 10px 0px 0px;
 }
 @media (max-width: 767px) {
   .contacts__container {
@@ -2531,7 +2564,7 @@ body._lock {
 .contacts__title {
   color: white;
   font-family: Cera Pro;
-  font-size: 56px;
+  font-size: 30px;
   font-weight: 500;
   line-height: 115%;
   margin-bottom: 32px;
@@ -2815,7 +2848,7 @@ body._lock {
   background: #1e42a3;
   color: #FFF;
   font-family: Cera Pro;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 500;
   line-height: 116%;
   letter-spacing: 0.14px;
@@ -3120,7 +3153,7 @@ body._lock {
 @media (max-width: 500px) {
 
     .header__logo a img {
-      width: 160px;
+      width: 240px;
     }
 
   .header__button {
@@ -3132,7 +3165,7 @@ body._lock {
   .header__container {
     padding: 8px 15px 8px 15px;
     min-height: auto;
-    border-radius: 30px;
+    border-radius: 10px;
   }
 
   .headerContainer {
