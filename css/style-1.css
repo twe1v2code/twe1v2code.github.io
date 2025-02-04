@@ -355,6 +355,7 @@ body._lock {
   transition: all .2s;
   margin-right: -20px;
   height: 55px;
+  font-size: 15px;
 }
 
 .header__button:hover {
