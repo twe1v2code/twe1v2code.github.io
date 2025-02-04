@@ -1532,10 +1532,11 @@ body._lock {
 
   .menu__list {
     display: flex;
-    -moz-column-gap: 60px;
-         column-gap: 60px;
+    -moz-column-gap: 35px;
+         column-gap: 35px;
     row-gap: 8px;
     flex-wrap: wrap;
+    padding-left: 100px;
   }
 
 }
