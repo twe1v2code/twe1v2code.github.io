@@ -48,10 +48,15 @@
 							</div>
 						</div>
 					</nav>
-					<a href="" class="header__phone">+998 99 066-66-99</a>
+					<!-- <a href="" class="header__phone">+998 99 066-66-99</a> -->
 					
 					<div class="header__whatsapp">
-						<!-- <a href="https://wa.me/998990666699" target="_blank" class="header__whatsapp-link"><img src="../img/ws.svg" alt="icon"></a> -->
+						<a href="tel:+1234567890">
+							<!-- <img src="../img/ws.png" alt="Call WhatsApp" width="65" height="65"> -->
+							<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="65" height="65" viewBox="0 -10 256 256">
+								<g fill="#1e42a3" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M14,3.99023c-5.51133,0 -10,4.48867 -10,10v22c0,5.51133 4.48867,10 10,10h22c5.51133,0 10,-4.48867 10,-10v-22c0,-5.51133 -4.48867,-10 -10,-10zM18.00586,12.0332c0.628,0.027 1.20473,0.38083 1.55273,0.92383c0.396,0.618 1.01055,1.57712 1.81055,2.82813c0.73,1.141 0.78091,2.61469 0.12891,3.80469l-1.46484,2.08398c-0.396,0.564 -0.47498,1.28588 -0.20898,1.92188c0.414,0.99 1.21658,2.5115 2.64258,3.9375c1.426,1.426 2.9475,2.22858 3.9375,2.64258c0.636,0.266 1.35788,0.18702 1.92188,-0.20898l2.08398,-1.46484c1.19,-0.652 2.66369,-0.60009 3.80469,0.12891c1.251,0.8 2.21012,1.41455 2.82813,1.81055c0.543,0.348 0.89683,0.92473 0.92383,1.55273c0.154,3.564 -2.60716,5.00781 -3.41016,5.00781c-0.556,0 -7.2403,0.7597 -14.7793,-6.7793c-7.539,-7.539 -6.7793,-14.2233 -6.7793,-14.7793c0,-0.803 1.44381,-3.56416 5.00781,-3.41016z"></path></g></g>
+								</svg>
+						</a>					
 					</div>
 
 					<button class="header__button" data-fancybox="" data-src="#popup">CONTACT US</button>
@@ -261,7 +266,7 @@
 								</div>
 							</div>
 						</div>
-						<!-- <div class="details__profile-image"><img src="../img/profile.svg" alt=""></div> -->
+						<div class="details__profile-image"><img src="/img/nighora.png" alt=""></div>
 					</div>
 					<div class="details__content">
 						<div class="details__slider-cover">
@@ -643,13 +648,35 @@
 		</footer>
 		<div id="popup" style="display:none;" class="popup">
 			<div class="popup__body">
-				<h4>Call Us</h4>					
-				<a href="" class="popup__content-item-phone">+998 99 066-66-99</a>
-				<a href="" class="popup__content-item-phone">+998 99 066-66-99</a>		
-				<h4>Mail</h4>			
-				<a href="" class="popup__content-item-phone">imc@mtm.uz</a>		
-				<a href="" class="popup__content-item-phone">imc@mtm.uz</a>		
+				<div class="popup__card">
+					<h4>Call Us</h4>
+					<a href="tel:+998990666699" class="popup__content-item-phone">+998 99 066-66-99</a>
+					<a href="tel:+998990666699" class="popup__content-item-phone">+998 99 066-66-99</a>
 				</div>
+			
+				<div class="popup__card">
+					<h4>Mail</h4>
+					<a href="mailto:imc@mtm.uz" class="popup__content-item-phone">imc@mtm.uz</a>
+					<a href="mailto:imc@mtm.uz" class="popup__content-item-phone">imc@mtm.uz</a>
+				</div>
+			
+				<div class="popup__card">
+					<h4>Our Location</h4>
+					<!-- Вставляем iframe для Яндекс карты -->
+					<iframe 
+						width="100%" 
+						height="300" 
+						frameborder="0" 
+						src="https://yandex.ru/map-widget/v1/-/CBucU6V~8B" 
+						allowfullscreen>
+					</iframe>
+					
+				</div>
+			</div>
+			
+			
+			
+			
 				<div class="popup__content">
 					<div class="popup__content-item open">	
 						<div class="popupGroupTel">
@@ -794,7 +821,60 @@
 			});			
 		</script> -->
 
-		
+		<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
+<script>
+    function initMap() {
+        // Генерация случайных координат в пределах определенного диапазона
+        const randomLat = 37.7749 + (Math.random() - 0.5) * 0.1;  // Случайная широта вокруг Сан-Франциско
+        const randomLng = -122.4194 + (Math.random() - 0.5) * 0.1; // Случайная долгота вокруг Сан-Франциско
+
+        // Устанавливаем карту с случайными координатами
+        const location = { lat: randomLat, lng: randomLng };
+
+        const map = new google.maps.Map(document.getElementById("map"), {
+            center: location,
+            zoom: 12
+        });
+
+        // Добавляем маркер
+        const marker = new google.maps.Marker({
+            position: location,
+            map: map,
+            title: "Random Location"
+        });
+    }
+</script>
+
+
+<!-- Подключаем Leaflet.js (картографическая библиотека) -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+<script>
+    // Функция инициализации карты
+    function initMap() {
+        // Указываем конкретные координаты (широта 41.310769, долгота 69.305033)
+        const lat = 41.310769;
+        const lng = 69.305033;
+
+        // Инициализация карты с заданными координатами
+        const map = L.map('map').setView([lat, lng], 15);  // Уровень зума можно настроить (например, 15)
+
+        // Добавление тайлов с OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Добавление маркера на карту
+        L.marker([lat, lng]).addTo(map)
+            .bindPopup('Our Location')
+            .openPopup();
+    }
+
+    // Инициализируем карту после загрузки страницы
+    window.onload = initMap;
+</script>
+
 
 
 </body>

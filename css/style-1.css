@@ -27,6 +27,8 @@
   box-sizing: border-box;
 }
 
+
+
 :focus,
 :active {
   outline: none;
@@ -1127,10 +1129,12 @@ body._lock {
 .details__profile-image img {
   max-width: 370px;
   width: 100%;
+  border-radius: 20px;
 }
 @media (max-width: 600px) {
   .details__profile-image {
     grid-row-start: 1;
+    border-radius: 20px;
   }
 }
 .details__content {
@@ -1536,10 +1540,16 @@ body._lock {
 
 }
 
+#map {
+  height: 300px;
+  width: 100%;
+}
+
+
 .popup__body h4 {
   font-size: 24px; /* Увеличенный размер */
   font-weight: bold; /* Жирный шрифт */
-  color: #1e42a3; /* Яркий цвет для акцента */
+  color:rgb(255, 255, 255); /* Яркий цвет для акцента */
   text-transform: uppercase; /* Сделать заглавными */
   margin-bottom: 10px;
 }
@@ -2488,7 +2498,7 @@ body._lock {
   background-color:rgb(255, 255, 255);
 }
 .contacts__decor-left {
-  background-color:rgb(255, 255, 255);
+  background:rgb(255, 255, 255);
   height: 80px;
   position: relative;
 }
@@ -2499,7 +2509,9 @@ body._lock {
   left: 0;
   width: 73%;
   height: 100%;
-  background-color: #fff;
+  background:rgb(255, 255, 255)
+
+
   border-radius: 0px 80px 80px 0px;
 }
 @media (max-width: 992px) {
@@ -2552,7 +2564,10 @@ body._lock {
 .contacts__container {
   padding-top: 64px;
   padding-bottom: 64px;
-  background-color: #122969;
+  background-image: url('/img/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border-radius: 10px 10px 0px 0px;
 }
 @media (max-width: 767px) {
@@ -2844,8 +2859,45 @@ body._lock {
   justify-content: center;
 }
 
+
+.popup__body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.popup__card {
+  background-color: #1d2431;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup__card h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.popup__content-item-phone {
+  display: block;
+  color: #57aaff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  margin: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.popup__content-item-phone:hover {
+  color: #f0f0f0;
+}
+
+
+
 .footer {
-  background: #1e42a3;
+  background: #0f1325;
   color: #FFF;
   font-family: Cera Pro;
   font-size: 10px;
@@ -2904,7 +2956,7 @@ body._lock {
 
 .popup {
   max-width: 950px;
-  background-color: #FFF;
+  background-color: #474d57;
   min-width: 100%;
   padding: 64px;
   box-shadow: 0px 16px 16px 0px rgba(169, 169, 169, 0.1);
@@ -3221,7 +3273,8 @@ body._lock {
     }
 
     .details__profile-image img {
-      max-width: 210px;
+      max-width: 300px;
+      border-radius: 20px;
     }
 
     .for__tab-buttons {
