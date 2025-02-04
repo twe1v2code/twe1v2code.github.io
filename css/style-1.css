@@ -358,6 +358,48 @@ body._lock {
   font-size: 15px;
 }
 
+.contacts__container {
+  position: relative;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.2); /* Полупрозрачный белый фон */
+  border-radius: 20px; /* Сглаженные углы */
+  backdrop-filter: blur(12px); /* Эффект размытия фона */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Легкая тень для создания глубины */
+  color: white; /* Цвет текста */
+}
+
+.contacts__title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contacts__body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.body-contacts__column {
+  flex: 1;
+  padding: 20px;
+}
+
+.contacts__adress-text {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.2); /* Полупрозрачный фон */
+  border-radius: 10px; /* Сглаженные углы */
+  backdrop-filter: blur(10px); /* Эффект размытия */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+.contacts__time-text {
+  background: rgba(255, 255, 255, 0.2); /* Полупрозрачный фон для рабочего времени */
+  padding: 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px); /* Эффект размытия */
+}
+
+
+
 .header__button:hover {
   background: #06b8fc;
 }
