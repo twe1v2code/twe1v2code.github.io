@@ -375,6 +375,7 @@ body._lock {
        column-gap: 50px;
   row-gap: 8px;
   flex-wrap: wrap;
+  padding-left: 100px;
 }
 
 .menu__list a {
