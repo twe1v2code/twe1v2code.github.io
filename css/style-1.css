@@ -195,6 +195,46 @@ body._lock {
   }
 }
 
+
+/* Hide WhatsApp button on larger screens */
+.header__whatsapp {
+  display: none;
+}
+
+.header__whatsapp {
+  position: fixed;
+  bottom: 20px; /* Distance from the bottom */
+  right: 20px; /* Distance from the right */
+  z-index: 9999; /* Ensure it's above other content */
+  display: block;
+}
+
+.whatsapp-icon-container {
+  background-color: #FFFFFF; /* White background */
+  border-radius: 12px; /* Rounded square */
+  padding: 8px; /* Padding around the icon */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.whatsapp-icon-container svg {
+  background-color: transparent; /* Transparent inside */
+}
+
+@media (max-width: 768px) {
+  .header__whatsapp {
+      display: block;
+      position: fixed;
+      bottom: 20px; /* Distance from the bottom */
+      right: 20px; /* Distance from the right */
+      z-index: 9999; /* Ensure it's above other content */
+  }
+}
+
+
+
 .header.mobile .header__container {
   z-index: 1000;
 }
@@ -240,8 +280,12 @@ body._lock {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #fff;
+  background: rgba(255, 255, 255, 0.3); /* Lighter transparency */
+  backdrop-filter: blur(10px); /* Add blur effect */
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
 }
+
+
 @media (max-width: 992px) {
   .header__logo {
     width: 50px;
@@ -349,14 +393,21 @@ body._lock {
 }
 .header__button {
   border-radius: 10px;
-  background: #1e42a3;
-  padding: 11px 32px 11px 32px;
-  color: #fff;
+  border: 2px solid #1e42a3; /* Thin border instead of background */
+  padding: 11px 32px;
+  color: #1e42a3; /* Change text color to match the border */
+  background: transparent; /* Remove background */
   transition: all .2s;
   margin-right: -20px;
   height: 55px;
   font-size: 15px;
 }
+
+.header__button:hover {
+  background-color: #1e42a3; /* Optional: Add hover background color */
+  color: #fff; /* Change text color to white on hover */
+}
+
 
 .contacts__container {
   position: relative;
@@ -367,6 +418,9 @@ body._lock {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Легкая тень для создания глубины */
   color: white; /* Цвет текста */
 }
+
+
+
 
 .contacts__title {
   font-size: 2rem;
@@ -399,10 +453,6 @@ body._lock {
 }
 
 
-
-.header__button:hover {
-  background: #06b8fc;
-}
 
 
 
@@ -3364,9 +3414,7 @@ body._lock {
       display: block;
     }
 
-    .footer {
-      padding-bottom: 100px;
-    }
+   
 
     .offers__list-item {
       font-size: 16px;
