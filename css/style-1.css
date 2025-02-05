@@ -281,7 +281,7 @@ body._lock {
   width: 100%;
   height: 100%;
   background: rgba(255, 255, 255, 0.3); /* Lighter transparency */
-  backdrop-filter: blur(10px); /* Add blur effect */
+  backdrop-filter: blur(30px); /* Add blur effect */
   transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
 }
 
